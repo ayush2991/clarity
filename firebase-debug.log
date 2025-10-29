@@ -1,0 +1,179 @@
+[debug] [2025-10-29T03:26:05.077Z] ----------------------------------------------------------------------
+[debug] [2025-10-29T03:26:05.078Z] Command:       /Users/aayushagarwal/.nvm/versions/node/v22.19.0/bin/node /Users/aayushagarwal/.nvm/versions/node/v22.19.0/bin/firebase emulators:start
+[debug] [2025-10-29T03:26:05.078Z] CLI Version:   14.22.0
+[debug] [2025-10-29T03:26:05.079Z] Platform:      darwin
+[debug] [2025-10-29T03:26:05.079Z] Node Version:  v22.19.0
+[debug] [2025-10-29T03:26:05.079Z] Time:          Tue Oct 28 2025 23:26:05 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-10-29T03:26:05.079Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-29T03:26:05.175Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-29T03:26:05.175Z] > authorizing via signed-in user (ayush2991@gmail.com)
+[info] i  emulators: Starting emulators: functions, hosting, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting, extensions"}}
+[debug] [2025-10-29T03:26:05.176Z] Checked if tokens are valid: true, expires at: 1761711389597
+[debug] [2025-10-29T03:26:05.176Z] Checked if tokens are valid: true, expires at: 1761711389597
+[debug] [2025-10-29T03:26:05.176Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/clarity-1028-79688 [none]
+[debug] [2025-10-29T03:26:05.613Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/clarity-1028-79688 200
+[debug] [2025-10-29T03:26:05.613Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/clarity-1028-79688 {"projectNumber":"741241139525","projectId":"clarity-1028-79688","lifecycleState":"ACTIVE","name":"clarity","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-10-29T03:00:26.958595Z"}
+[debug] [2025-10-29T03:26:05.845Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-29T03:26:05.845Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-29T03:26:05.845Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-10-29T03:26:05.847Z] Emulator locator file path: /var/folders/_s/xdj7n1lj2hz4pz7wymr3ncz40000gn/T/hub-clarity-1028-79688.json
+[debug] [2025-10-29T03:26:05.847Z] [hub] writing locator at /var/folders/_s/xdj7n1lj2hz4pz7wymr3ncz40000gn/T/hub-clarity-1028-79688.json
+[debug] [2025-10-29T03:26:05.848Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2025-10-29T03:26:05.987Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-29T03:26:05.987Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-29T03:26:05.987Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-29T03:26:05.987Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, firestore, database, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, firestore, database, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2025-10-29T03:26:05.991Z] defaultcredentials: writing to file /Users/aayushagarwal/.config/firebase/ayush2991_gmail_com_application_default_credentials.json
+[debug] [2025-10-29T03:26:05.992Z] Setting GAC to /Users/aayushagarwal/.config/firebase/ayush2991_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/aayushagarwal/.config/firebase/ayush2991_gmail_com_application_default_credentials.json"}}
+[debug] [2025-10-29T03:26:05.993Z] Checked if tokens are valid: true, expires at: 1761711389597
+[debug] [2025-10-29T03:26:05.993Z] Checked if tokens are valid: true, expires at: 1761711389597
+[debug] [2025-10-29T03:26:05.993Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clarity-1028-79688/adminSdkConfig [none]
+[debug] [2025-10-29T03:26:06.488Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clarity-1028-79688/adminSdkConfig 200
+[debug] [2025-10-29T03:26:06.488Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clarity-1028-79688/adminSdkConfig {"projectId":"clarity-1028-79688","storageBucket":"clarity-1028-79688.firebasestorage.app"}
+[debug] [2025-10-29T03:26:06.506Z] Checked if tokens are valid: true, expires at: 1761711389597
+[debug] [2025-10-29T03:26:06.506Z] Checked if tokens are valid: true, expires at: 1761711389597
+[debug] [2025-10-29T03:26:06.506Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/clarity-1028-79688/sites 
+[debug] [2025-10-29T03:26:07.308Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/clarity-1028-79688/sites 200
+[debug] [2025-10-29T03:26:07.309Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/clarity-1028-79688/sites {"sites":[{"name":"projects/clarity-1028-79688/sites/clarity-1028-79688","defaultUrl":"https://clarity-1028-79688.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-10-29T03:26:07.309Z] Checked if tokens are valid: true, expires at: 1761711389597
+[debug] [2025-10-29T03:26:07.310Z] Checked if tokens are valid: true, expires at: 1761711389597
+[debug] [2025-10-29T03:26:07.310Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clarity-1028-79688/webApps/-/config [none]
+[debug] [2025-10-29T03:26:07.772Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clarity-1028-79688/webApps/-/config 200
+[debug] [2025-10-29T03:26:07.772Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clarity-1028-79688/webApps/-/config {"projectId":"clarity-1028-79688","storageBucket":"clarity-1028-79688.firebasestorage.app","apiKey":"AIzaSyAwR_AS_gaT1dKaoyETG1EshUt-tP-tvyQ","authDomain":"clarity-1028-79688.firebaseapp.com","messagingSenderId":"741241139525","projectNumber":"741241139525","version":"2"}
+[debug] [2025-10-29T03:26:07.782Z] Checked if tokens are valid: true, expires at: 1761711389597
+[debug] [2025-10-29T03:26:07.782Z] Checked if tokens are valid: true, expires at: 1761711389597
+[debug] [2025-10-29T03:26:07.783Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clarity-1028-79688 [none]
+[debug] [2025-10-29T03:26:08.175Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clarity-1028-79688 200
+[debug] [2025-10-29T03:26:08.175Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clarity-1028-79688 {"projectId":"clarity-1028-79688","projectNumber":"741241139525","displayName":"clarity","name":"projects/clarity-1028-79688","resources":{"hostingSite":"clarity-1028-79688"},"state":"ACTIVE","etag":"1_2721db97-f124-4c43-b9db-ddcb7b9655eb"}
+[info] ✔  hosting[clarity-1028-79688]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2025-10-29T03:26:08.237Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "/Users/aayushagarwal/projects/clarity/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/aayushagarwal/projects/clarity/functions\" for Cloud Functions..."}}
+[debug] [2025-10-29T03:26:08.239Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-10-29T03:26:08.752Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.0.1",
+    "firebase-functions": "^4.0.1",
+    "@google/generative-ai": "^0.1.3"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^2.0.0"
+  },
+  "private": true
+}
+[debug] [2025-10-29T03:26:08.752Z] Building nodejs source
+[debug] [2025-10-29T03:26:08.752Z] Failed to find version of module node: reached end of search path /Users/aayushagarwal/projects/clarity/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-10-29T03:26:08.754Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-29T03:26:08.760Z] Found firebase-functions binary at '/Users/aayushagarwal/projects/clarity/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8129
+
+[error] {"severity":"WARNING","message":"params.GEMINI_API_KEY.value() invoked during function deployment, instead of during runtime."}
+
+[error] {"severity":"WARNING","message":"This is usually a mistake. In configs, use Params directly without calling .value()."}
+{"severity":"WARNING","message":"example: { memory: memoryParam } not { memory: memoryParam.value() }"}
+
+[debug] [2025-10-29T03:26:08.955Z] Got response from /__/functions.yaml {"endpoints":{"chat":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"chat"}},"specVersion":"v1alpha1","requiredAPIs":[],"params":[{"name":"GEMINI_API_KEY","type":"string"}]}
+[info] ✔  functions: Loaded functions definitions from source: chat. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: chat."}}
+[info] ✔  functions[us-central1-chat]: http function initialized (http://127.0.0.1:5001/clarity-1028-79688/us-central1/chat). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/clarity-1028-79688/us-central1/chat)."}}
+[debug] [2025-10-29T03:26:12.982Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator   │ Host:Port      │ View in Emulator UI              │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Functions  │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Hosting    │ 127.0.0.1:5000 │ n/a                              │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/extensions │
+└────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[info] i  hosting: 127.0.0.1 - - [29/Oct/2025:03:26:29 +0000] "GET / HTTP/1.1" 200 - "http://127.0.0.1:4000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [29/Oct/2025:03:26:29 +0000] \"GET / HTTP/1.1\" 200 - \"http://127.0.0.1:4000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [29/Oct/2025:03:26:29 +0000] "GET /style.css HTTP/1.1" 200 723 "http://127.0.0.1:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [29/Oct/2025:03:26:29 +0000] \"GET /style.css HTTP/1.1\" 200 723 \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [29/Oct/2025:03:26:29 +0000] "GET /script.js HTTP/1.1" 200 - "http://127.0.0.1:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [29/Oct/2025:03:26:29 +0000] \"GET /script.js HTTP/1.1\" 200 - \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [29/Oct/2025:03:26:29 +0000] "GET /favicon.ico HTTP/1.1" 304 - "http://127.0.0.1:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [29/Oct/2025:03:26:29 +0000] \"GET /favicon.ico HTTP/1.1\" 304 - \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\""}}
+[info] [hosting] Rewriting /chat to http://127.0.0.1:5001/clarity-1028-79688/us-central1/chat for local Function us-central1/chat
+[debug] [2025-10-29T03:26:36.473Z] >>> [apiv2][query] POST http://127.0.0.1:5001/clarity-1028-79688/us-central1/chat/chat 
+[debug] [2025-10-29T03:26:36.474Z] >>> [apiv2][body] POST http://127.0.0.1:5001/clarity-1028-79688/us-central1/chat/chat [stream]
+[debug] [2025-10-29T03:26:36.478Z] [work-queue] {"queuedWork":["/clarity-1028-79688/us-central1/chat/chat-2025-10-29T03:26:36.478Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-10-29T03:26:36.478Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/clarity-1028-79688/us-central1/chat/chat-2025-10-29T03:26:36.478Z"],"workRunningCount":1}
+[debug] [2025-10-29T03:26:36.479Z] Accepted request POST /clarity-1028-79688/us-central1/chat/chat --> us-central1-chat
+[debug] [2025-10-29T03:26:36.482Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-10-29T03:26:36.482Z] [functions] Got req.url=/clarity-1028-79688/us-central1/chat/chat, mapping to path=/chat {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clarity-1028-79688/us-central1/chat/chat, mapping to path=/chat"}}
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-10-29T03:26:36.488Z] [worker-pool] addWorker(us-central1-chat) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-chat)"}}
+[debug] [2025-10-29T03:26:36.488Z] [worker-pool] Adding worker with key us-central1-chat, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-chat, total=1"}}
+[debug] [2025-10-29T03:26:36.931Z] [runtime-status] [78215] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.1","resolution":"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[runtime-status] [78215] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2025-10-29T03:26:36.931Z] [runtime-status] [78215] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.9.0","resolution":"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[runtime-status] [78215] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.9.0\",\"resolution\":\"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2025-10-29T03:26:36.931Z] [runtime-status] [78215] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[runtime-status] [78215] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2025-10-29T03:26:36.931Z] [runtime-status] [78215] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.9.0","resolution":"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[runtime-status] [78215] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.9.0\",\"resolution\":\"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2025-10-29T03:26:36.977Z] [runtime-status] [78215] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[runtime-status] [78215] Checked functions.config() {\"config\":{}}"}}
+[debug] [2025-10-29T03:26:36.977Z] [runtime-status] [78215] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.9.0","resolution":"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[runtime-status] [78215] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.9.0\",\"resolution\":\"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2025-10-29T03:26:36.977Z] [runtime-status] [78215] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.9.0","resolution":"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[runtime-status] [78215] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.9.0\",\"resolution\":\"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2025-10-29T03:26:36.977Z] [runtime-status] [78215] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.1","resolution":"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[runtime-status] [78215] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2025-10-29T03:26:36.978Z] [runtime-status] [78215] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.9.0","resolution":"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[runtime-status] [78215] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.9.0\",\"resolution\":\"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2025-10-29T03:26:36.978Z] [runtime-status] [78215] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.1","resolution":"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[runtime-status] [78215] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/Users/aayushagarwal/projects/clarity/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2025-10-29T03:26:36.980Z] [runtime-status] [78215] Functions runtime initialized. {"cwd":"/Users/aayushagarwal/projects/clarity/functions","node_version":"22.19.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[runtime-status] [78215] Functions runtime initialized. {\"cwd\":\"/Users/aayushagarwal/projects/clarity/functions\",\"node_version\":\"22.19.0\"}"}}
+[debug] [2025-10-29T03:26:36.980Z] [runtime-status] [78215] Listening to port: /var/folders/_s/xdj7n1lj2hz4pz7wymr3ncz40000gn/T/fire_emu_ae5e1e44ca826e90.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[runtime-status] [78215] Listening to port: /var/folders/_s/xdj7n1lj2hz4pz7wymr3ncz40000gn/T/fire_emu_ae5e1e44ca826e90.sock"}}
+[debug] [2025-10-29T03:26:36.998Z] [worker-us-central1-chat-53bb5160-ea3a-4de8-b1f1-ee14956f95d5]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[worker-us-central1-chat-53bb5160-ea3a-4de8-b1f1-ee14956f95d5]: IDLE"}}
+[debug] [2025-10-29T03:26:36.998Z] [worker-pool] submitRequest(triggerId=us-central1-chat) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-chat)"}}
+[info] i  functions: Beginning execution of "us-central1-chat" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"Beginning execution of \"us-central1-chat\""}}
+[debug] [2025-10-29T03:26:36.998Z] [worker-us-central1-chat-53bb5160-ea3a-4de8-b1f1-ee14956f95d5]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[worker-us-central1-chat-53bb5160-ea3a-4de8-b1f1-ee14956f95d5]: BUSY"}}
+[debug] [2025-10-29T03:26:40.507Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-chat" in 3509.303667ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"Finished \"us-central1-chat\" in 3509.303667ms"}}
+[debug] [2025-10-29T03:26:40.507Z] [worker-us-central1-chat-53bb5160-ea3a-4de8-b1f1-ee14956f95d5]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[worker-us-central1-chat-53bb5160-ea3a-4de8-b1f1-ee14956f95d5]: IDLE"}}
+[debug] [2025-10-29T03:26:40.507Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-10-29T03:26:40.508Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-10-29T03:26:40.508Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-10-29T03:26:40.508Z] <<< [apiv2][status] POST http://127.0.0.1:5001/clarity-1028-79688/us-central1/chat/chat 200
+[debug] [2025-10-29T03:26:40.508Z] <<< [apiv2][body] POST http://127.0.0.1:5001/clarity-1028-79688/us-central1/chat/chat [stream]
+[info] i  hosting: 127.0.0.1 - - [29/Oct/2025:03:26:40 +0000] "POST /chat HTTP/1.1" 200 455 "http://127.0.0.1:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [29/Oct/2025:03:26:40 +0000] \"POST /chat HTTP/1.1\" 200 455 \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\""}}
+[info] [hosting] Rewriting /chat to http://127.0.0.1:5001/clarity-1028-79688/us-central1/chat for local Function us-central1/chat
+[debug] [2025-10-29T03:26:58.816Z] >>> [apiv2][query] POST http://127.0.0.1:5001/clarity-1028-79688/us-central1/chat/chat 
+[debug] [2025-10-29T03:26:58.817Z] >>> [apiv2][body] POST http://127.0.0.1:5001/clarity-1028-79688/us-central1/chat/chat [stream]
+[debug] [2025-10-29T03:26:58.820Z] [work-queue] {"queuedWork":["/clarity-1028-79688/us-central1/chat/chat-2025-10-29T03:26:58.820Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-10-29T03:26:58.821Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/clarity-1028-79688/us-central1/chat/chat-2025-10-29T03:26:58.820Z"],"workRunningCount":1}
+[debug] [2025-10-29T03:26:58.821Z] Accepted request POST /clarity-1028-79688/us-central1/chat/chat --> us-central1-chat
+[debug] [2025-10-29T03:26:58.824Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-10-29T03:26:58.824Z] [functions] Got req.url=/clarity-1028-79688/us-central1/chat/chat, mapping to path=/chat {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clarity-1028-79688/us-central1/chat/chat, mapping to path=/chat"}}
+[debug] [2025-10-29T03:26:58.824Z] [worker-pool] submitRequest(triggerId=us-central1-chat) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-chat)"}}
+[info] i  functions: Beginning execution of "us-central1-chat" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"Beginning execution of \"us-central1-chat\""}}
+[debug] [2025-10-29T03:26:58.824Z] [worker-us-central1-chat-53bb5160-ea3a-4de8-b1f1-ee14956f95d5]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[worker-us-central1-chat-53bb5160-ea3a-4de8-b1f1-ee14956f95d5]: BUSY"}}
+[debug] [2025-10-29T03:27:02.409Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-chat" in 3585.673583ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"Finished \"us-central1-chat\" in 3585.673583ms"}}
+[debug] [2025-10-29T03:27:02.410Z] [worker-us-central1-chat-53bb5160-ea3a-4de8-b1f1-ee14956f95d5]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"[worker-us-central1-chat-53bb5160-ea3a-4de8-b1f1-ee14956f95d5]: IDLE"}}
+[debug] [2025-10-29T03:27:02.411Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-10-29T03:27:02.411Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chat"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-10-29T03:27:02.411Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-10-29T03:27:02.412Z] <<< [apiv2][status] POST http://127.0.0.1:5001/clarity-1028-79688/us-central1/chat/chat 200
+[debug] [2025-10-29T03:27:02.412Z] <<< [apiv2][body] POST http://127.0.0.1:5001/clarity-1028-79688/us-central1/chat/chat [stream]
+[info] i  hosting: 127.0.0.1 - - [29/Oct/2025:03:27:02 +0000] "POST /chat HTTP/1.1" 200 843 "http://127.0.0.1:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [29/Oct/2025:03:27:02 +0000] \"POST /chat HTTP/1.1\" 200 843 \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\""}}
