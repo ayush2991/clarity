@@ -1,15 +1,15 @@
-const functions = require("firebase-functions");
+const { onRequest } = require("firebase-functions/v2/https");
+const { defineSecret } = require('firebase-functions/params');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const { defineString } = require('firebase-functions/params');
 
-// Define the GEMINI_API_KEY secret
-const geminiApiKey = defineString('GEMINI_API_KEY');
+// Declare the GEMINI_API_KEY as a Secret managed by Firebase
+const GEMINI_API_KEY = defineSecret('GEMINI_API_KEY');
 
-// Initialize the GoogleGenerativeAI client
-const genAI = new GoogleGenerativeAI(geminiApiKey.value());
-
-exports.chat = functions.https.onRequest(async (request, response) => {
+exports.chat = onRequest({ secrets: [GEMINI_API_KEY] }, async (request, response) => {
   try {
+    // Initialize the GoogleGenerativeAI client at runtime
+    const genAI = new GoogleGenerativeAI(GEMINI_API_KEY.value());
+    
     // Get the user's message from the request body
     const userMessage = request.body.message;
 

@@ -1,0 +1,40 @@
+name: Deploy to Firebase
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: functions/package.json
+
+      - name: Install dependencies
+        run: |
+          cd functions
+          npm ci
+
+      - name: Ensure cleanup policy (us-central1)
+        uses: w9jds/firebase-action@master
+        with:
+          args: functions:artifacts:setpolicy --location us-central1 --days 3
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only functions,hosting --non-interactive
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

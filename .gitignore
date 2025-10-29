@@ -4,3 +4,22 @@
 
 # macOS
 .DS_Store
+
+# Firebase
+.firebase/
+.firebaserc.local
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+pubsub-debug.log
+firestore.rules.backup
+storage.rules.backup
+functions/.runtimeconfig.json
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
