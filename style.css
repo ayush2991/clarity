@@ -15,6 +15,11 @@
     --summary-container-bg: #f7f7f7;
     --modal-content-bg: #fff;
     --modal-text-color: #333;
+    --btn-outline-bg: transparent;
+    --btn-outline-border: #6c757d;
+    --btn-outline-color: #6c757d;
+    --btn-outline-hover-bg: #6c757d;
+    --btn-outline-hover-color: #fff;
 }
 
 body.dark-mode {
@@ -31,24 +36,42 @@ body.dark-mode {
     --summary-container-bg: #1a1a2e;
     --modal-content-bg: #16213e;
     --modal-text-color: #e0e0e0;
+    --btn-outline-bg: transparent;
+    --btn-outline-border: #6c757d;
+    --btn-outline-color: #a8a8a8;
+    --btn-outline-hover-bg: #6c757d;
+    --btn-outline-hover-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body, html {
     height: 100%;
+    margin: 0;
+    padding: 0;
     font-family: 'Inter', sans-serif;
     background-color: var(--body-bg);
     color: var(--text-color);
+    overflow: hidden;
+}
+
+.container-fluid {
+    max-height: 100vh;
 }
 
 .chat-container {
     padding: 20px;
     overflow-y: auto;
+    height: 100%;
 }
 
 .chat-history {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    min-height: min-content;
 }
 
 .chat-message {
@@ -56,10 +79,11 @@ body, html {
     border-radius: 25px;
     max-width: 70%;
     line-height: 1.5;
+    word-wrap: break-word;
 }
 
 .user-message {
-    background-color: #007bff; /* Keep primary color for user messages */
+    background-color: #007bff;
     color: white;
     align-self: flex-end;
     border-bottom-right-radius: 5px;
@@ -77,24 +101,34 @@ body, html {
     padding: 20px;
     background-color: var(--chat-input-bg);
     border-top: 1px solid var(--chat-input-border);
+    flex-shrink: 0;
 }
 
 #user-input {
     border-radius: 25px;
     padding: 10px 20px;
-    background-color: var(--chat-input-bg); /* Ensure input background matches */
-    color: var(--text-color); /* Ensure input text color matches */
-    border: 1px solid var(--chat-input-border); /* Ensure input border matches */
+    background-color: var(--chat-input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--chat-input-border);
+}
+
+#user-input:focus {
+    background-color: var(--chat-input-bg);
+    color: var(--text-color);
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 #send-button, #summarize-button {
     border-radius: 25px;
+    white-space: nowrap;
 }
 
 header {
     box-shadow: var(--header-shadow);
     background-color: var(--header-bg);
     color: var(--text-color);
+    flex-shrink: 0;
 }
 
 .summary-container {
@@ -107,6 +141,7 @@ header {
     background-color: var(--left-panel-bg);
     border-right: 1px solid var(--left-panel-border);
     color: var(--text-color);
+    overflow-y: auto;
 }
 
 .modal-content {
@@ -116,9 +151,49 @@ header {
 }
 
 .modal-header, .modal-footer {
-    border-color: var(--chat-input-border); /* Use a consistent border color */
+    border-color: var(--chat-input-border);
 }
 
 .modal-title {
     color: var(--modal-text-color);
+}
+
+/* Custom button styling for dark mode */
+.btn-outline-secondary {
+    background-color: var(--btn-outline-bg);
+    border-color: var(--btn-outline-border);
+    color: var(--btn-outline-color);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--btn-outline-hover-bg);
+    border-color: var(--btn-outline-border);
+    color: var(--btn-outline-hover-color);
+}
+
+/* Form select styling for dark mode */
+.form-select {
+    background-color: var(--chat-input-bg);
+    color: var(--text-color);
+    border-color: var(--chat-input-border);
+}
+
+.form-select:focus {
+    background-color: var(--chat-input-bg);
+    color: var(--text-color);
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .chat-message {
+        max-width: 85%;
+    }
+    
+    #left-panel {
+        max-height: 30vh;
+        border-right: none;
+        border-bottom: 1px solid var(--left-panel-border);
+    }
 }
