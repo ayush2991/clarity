@@ -7,12 +7,17 @@ const summaryContent = document.getElementById('summary-content');
 const chatCol = document.getElementById('chat-col');
 const personalitySelect = document.getElementById('personality-select');
 const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
 
 // Dark mode functionality
 const currentTheme = localStorage.getItem('theme');
 
 function applyTheme(theme) {
     document.body.classList.toggle('dark-mode', theme === 'dark');
+    // Update icon based on theme
+    if (themeIcon) {
+        themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
 }
 
 // Apply saved theme or detect system preference
@@ -20,6 +25,8 @@ if (currentTheme) {
     applyTheme(currentTheme);
 } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     applyTheme('dark');
+} else {
+    applyTheme('light');
 }
 
 themeToggle.addEventListener('click', () => {
@@ -52,7 +59,9 @@ function addMessage(message, sender) {
 
 async function handleUserInput() {
     const userMessage = userInput.value;
-    const selectedPersonality = personalitySelect.value;
+    // Extract personality without emoji (e.g., "💙 Empathetic" -> "Empathetic")
+    const selectedPersonalityRaw = personalitySelect.value;
+    const selectedPersonality = selectedPersonalityRaw.split(' ').slice(1).join(' ') || selectedPersonalityRaw;
 
     if (userMessage.trim() !== '') {
         addMessage(userMessage, 'user');
