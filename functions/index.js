@@ -78,13 +78,31 @@ exports.summarize = onRequest({ secrets: [GEMINI_API_KEY] }, async (request, res
     // For text-only input, use the gemini-2.5-flash model
     const model = genAI.getGenerativeModel({ 
       model: "gemini-2.5-flash",
-      systemInstruction: "You are a helpful assistant that summarizes conversations. Provide a concise and insightful summary of the user's conversation with the AI therapist, Clarity."
+      systemInstruction: `You are a professional therapy session summarizer. Your task is to analyze the completed therapy conversation and provide a comprehensive, structured summary. This is NOT a continuation of the conversation - the session has ended.
+
+Provide a summary with the following sections:
+
+**Session Overview:**
+Brief overview of what was discussed in 2-3 sentences.
+
+**Key Themes:**
+List the main emotional themes and topics that emerged (e.g., anxiety, relationships, work stress, self-doubt).
+
+**Insights:**
+Highlight important realizations, patterns, or perspectives that came up during the conversation.
+
+**Actionable Steps:**
+If applicable, list concrete actions or strategies the user can consider moving forward. If no specific actions were discussed, suggest general next steps based on the themes.
+
+Keep the tone professional yet warm. Focus on being helpful and constructive. Do not address the user directly or suggest continuing the conversation.`
     });
 
     // Create a prompt from the conversation history
-    const prompt = conversationHistory.map(message => {
-        return `${message.role}: ${message.parts[0].text}`
-    }).join('\n');
+    const prompt = `Please provide a comprehensive summary of this therapy session:\n\n` + 
+      conversationHistory.map(message => {
+        const role = message.role === 'model' ? 'Clarity (AI Therapist)' : 'User';
+        return `${role}: ${message.parts[0].text}`;
+      }).join('\n\n');
 
     const result = await model.generateContent(prompt);
     const aiResponse = result.response;

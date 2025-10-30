@@ -127,6 +127,9 @@ async function handleSummarize() {
 
     // Show summary panel
     summaryPanelLeft.style.display = 'block';
+    
+    // Show loading message
+    summaryContent.innerHTML = '<p style="color: #888;">Generating summary...</p>';
 
     try {
         const response = await fetch('/summarize', {
@@ -139,7 +142,8 @@ async function handleSummarize() {
 
         if (response.ok) {
             const summary = await response.text();
-            summaryContent.innerText = summary;
+            // Render markdown as HTML for better formatting
+            summaryContent.innerHTML = converter.makeHtml(summary);
         } else {
             summaryContent.innerText = 'Sorry, something went wrong. Please try again later.';
         }
