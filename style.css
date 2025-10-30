@@ -1,9 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
+/* Define CSS variables for colors */
+:root {
+    --body-bg: #f7f7f7;
+    --text-color: #333;
+    --header-bg: #fff;
+    --header-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    --chat-input-bg: #fff;
+    --chat-input-border: #e5e5e5;
+    --ai-message-bg: #fff;
+    --ai-message-border: #e5e5e5;
+    --left-panel-bg: #f0f2f5;
+    --left-panel-border: #e5e5e5;
+    --summary-container-bg: #f7f7f7;
+    --modal-content-bg: #fff;
+    --modal-text-color: #333;
+}
+
+body.dark-mode {
+    --body-bg: #1a1a2e;
+    --text-color: #e0e0e0;
+    --header-bg: #16213e;
+    --header-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    --chat-input-bg: #16213e;
+    --chat-input-border: #0f3460;
+    --ai-message-bg: #0f3460;
+    --ai-message-border: #0f3460;
+    --left-panel-bg: #0f3460;
+    --left-panel-border: #0f3460;
+    --summary-container-bg: #1a1a2e;
+    --modal-content-bg: #16213e;
+    --modal-text-color: #e0e0e0;
+}
+
 body, html {
     height: 100%;
     font-family: 'Inter', sans-serif;
-    background-color: #f7f7f7;
+    background-color: var(--body-bg);
+    color: var(--text-color);
 }
 
 .chat-container {
@@ -25,29 +59,32 @@ body, html {
 }
 
 .user-message {
-    background-color: #007bff;
+    background-color: #007bff; /* Keep primary color for user messages */
     color: white;
     align-self: flex-end;
     border-bottom-right-radius: 5px;
 }
 
 .ai-message {
-    background-color: #fff;
-    color: #333;
+    background-color: var(--ai-message-bg);
+    color: var(--text-color);
     align-self: flex-start;
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--ai-message-border);
     border-bottom-left-radius: 5px;
 }
 
 .chat-input-container {
     padding: 20px;
-    background-color: #fff;
-    border-top: 1px solid #e5e5e5;
+    background-color: var(--chat-input-bg);
+    border-top: 1px solid var(--chat-input-border);
 }
 
 #user-input {
     border-radius: 25px;
     padding: 10px 20px;
+    background-color: var(--chat-input-bg); /* Ensure input background matches */
+    color: var(--text-color); /* Ensure input text color matches */
+    border: 1px solid var(--chat-input-border); /* Ensure input border matches */
 }
 
 #send-button, #summarize-button {
@@ -55,20 +92,33 @@ body, html {
 }
 
 header {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: var(--header-shadow);
+    background-color: var(--header-bg);
+    color: var(--text-color);
 }
 
 .summary-container {
     padding: 20px;
-    background-color: #f7f7f7;
+    background-color: var(--summary-container-bg);
     height: 100%;
 }
 
 #left-panel {
-    background-color: #f0f2f5;
-    border-right: 1px solid #e5e5e5;
+    background-color: var(--left-panel-bg);
+    border-right: 1px solid var(--left-panel-border);
+    color: var(--text-color);
 }
 
 .modal-content {
     border-radius: 15px;
+    background-color: var(--modal-content-bg);
+    color: var(--modal-text-color);
+}
+
+.modal-header, .modal-footer {
+    border-color: var(--chat-input-border); /* Use a consistent border color */
+}
+
+.modal-title {
+    color: var(--modal-text-color);
 }

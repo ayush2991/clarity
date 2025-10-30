@@ -6,6 +6,27 @@ const summaryPanelLeft = document.getElementById('summary-panel-left');
 const summaryContent = document.getElementById('summary-content');
 const chatCol = document.getElementById('chat-col');
 const personalitySelect = document.getElementById('personality-select');
+const themeToggle = document.getElementById('theme-toggle');
+
+// Dark mode functionality
+const currentTheme = localStorage.getItem('theme');
+
+function applyTheme(theme) {
+    document.body.classList.toggle('dark-mode', theme === 'dark');
+}
+
+// Apply saved theme or detect system preference
+if (currentTheme) {
+    applyTheme(currentTheme);
+} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    applyTheme('dark');
+}
+
+themeToggle.addEventListener('click', () => {
+    let theme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+    applyTheme(theme);
+    localStorage.setItem('theme', theme);
+});
 
 // The conversation history is stored in-memory and is not persisted. 
 // On page load/new session, the history is cleared. To avoid user confusion 
