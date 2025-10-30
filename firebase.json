@@ -12,6 +12,10 @@
         "function": "chat"
       },
       {
+        "source": "/summarize",
+        "function": "summarize"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

@@ -1,20 +1,38 @@
 const chatHistory = document.getElementById('chat-history');
 const userInput = document.getElementById('user-input');
 const sendButton = document.getElementById('send-button');
+const summarizeButton = document.getElementById('summarize-button');
+const summaryPanelLeft = document.getElementById('summary-panel-left');
+const summaryContent = document.getElementById('summary-content');
+const chatCol = document.getElementById('chat-col');
+const personalitySelect = document.getElementById('personality-select');
 
-// Store conversation history in Gemini API format
+// The conversation history is stored in-memory and is not persisted. 
+// On page load/new session, the history is cleared. To avoid user confusion 
+// from browser session restoration, we explicitly clear the chat UI.
+chatHistory.innerHTML = '';
 let conversationHistory = [];
+
+const converter = new showdown.Converter();
 
 function addMessage(message, sender) {
     const messageElement = document.createElement('div');
     messageElement.classList.add('chat-message', sender + '-message');
-    messageElement.innerText = message;
+
+    if (sender === 'ai') {
+        messageElement.innerHTML = converter.makeHtml(message);
+    } else {
+        messageElement.innerText = message;
+    }
+
     chatHistory.appendChild(messageElement);
     chatHistory.scrollTop = chatHistory.scrollHeight;
 }
 
 async function handleUserInput() {
     const userMessage = userInput.value;
+    const selectedPersonality = personalitySelect.value;
+
     if (userMessage.trim() !== '') {
         addMessage(userMessage, 'user');
         userInput.value = '';
@@ -33,7 +51,8 @@ async function handleUserInput() {
         try {
             const requestBody = { 
                 message: userMessage,
-                history: conversationHistory.slice(0, -1) // Send history without the current message
+                history: conversationHistory.slice(0, -1), // Send history without the current message
+                personality: selectedPersonality
             };
 
             console.log('Request Body:', JSON.stringify(requestBody, null, 2));
@@ -70,7 +89,38 @@ async function handleUserInput() {
     }
 }
 
+async function handleSummarize() {
+    // Disable input and buttons
+    userInput.disabled = true;
+    sendButton.disabled = true;
+    summarizeButton.disabled = true;
+
+    // Show summary panel
+    summaryPanelLeft.style.display = 'block';
+
+    try {
+        const response = await fetch('/summarize', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ history: conversationHistory })
+        });
+
+        if (response.ok) {
+            const summary = await response.text();
+            summaryContent.innerText = summary;
+        } else {
+            summaryContent.innerText = 'Sorry, something went wrong. Please try again later.';
+        }
+    } catch (error) {
+        console.error('Error calling summarize function:', error);
+        summaryContent.innerText = 'Sorry, something went wrong. Please try again later.';
+    }
+}
+
 sendButton.addEventListener('click', handleUserInput);
+summarizeButton.addEventListener('click', handleSummarize);
 
 userInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
